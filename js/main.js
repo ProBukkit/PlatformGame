@@ -47,7 +47,7 @@ function draw() {
         paddleX++;
         turnedAround = true;
     } else if(turnedAround = true){
-        if((paddle+1) > canvas.width){
+        if((paddleX+1) > canvas.width){
             turnedAround = false;
         }
     } else {
