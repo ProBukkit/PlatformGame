@@ -8,14 +8,8 @@ var ctx = canvas.getContext("2d");
         function resizeCanvas() {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-                
-                drawStuff(); 
         }
         resizeCanvas();
-        
-        function drawStuff() {
-                draw();
-        }
 })();
 
 var ballRadius = 10;
