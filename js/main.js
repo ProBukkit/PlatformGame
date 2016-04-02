@@ -1,4 +1,4 @@
-var Paddle = require('objects/paddle');
+require('objects/paddle');
 var canvas = document.getElementById("platCanvas");
 var ctx = canvas.getContext("2d");
 (function() {
