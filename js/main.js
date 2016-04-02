@@ -1,6 +1,4 @@
-require(['objects/paddle.js'], function (Paddle) {
-    var Paddle = require('objects/paddle.js');
-});
+var Paddle = require('./objects/paddle.js');
 var canvas = document.getElementById("platCanvas");
 var ctx = canvas.getContext("2d");
 (function() {
