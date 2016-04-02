@@ -8,9 +8,9 @@ var ctx = canvas.getContext("2d");
         function resizeCanvas() {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-                paddleWidth = canvas.height/50;
+                paddleWidth = canvas.height/5;
                 paddleHeight = canvas.width/50;
-                var paddleX = (canvas.width-paddleWidth)/2;
+                paddleX = (canvas.width-paddleWidth)/2;
         }
         resizeCanvas();
 })();
