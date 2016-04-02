@@ -1,4 +1,4 @@
-//Handles resizing screen and keeping correct
+var Paddle = require('objects/paddle.js');
 var canvas = document.getElementById("platCanvas");
 var ctx = canvas.getContext("2d");
 (function() {
@@ -24,6 +24,8 @@ var paddleHeight = canvas.height/50;
 var paddleWidth = canvas.width/5;
 var paddleX = (canvas.width-paddleWidth)/2;
 
+var paddle = new Paddle(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
@@ -32,6 +34,7 @@ function drawBall() {
     ctx.closePath();
 }
 
+/**
 var turnedAround = false;
 function drawPaddle() {
     ctx.beginPath();
@@ -40,10 +43,13 @@ function drawPaddle() {
     ctx.fill();
     ctx.closePath();
 }
+**/
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
+    paddle.draw();
+    /**
     drawPaddle();
     
     if(!turnedAround && (paddleX+paddleWidth+(canvas.width/500)) < canvas.width){
@@ -56,6 +62,7 @@ function draw() {
             turnedAround = false;
         }
     }
+    **/
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
