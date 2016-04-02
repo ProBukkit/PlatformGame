@@ -1,7 +1,7 @@
 //Handles resizing screen and keeping correct
+var canvas = document.getElementById("platCanvas");
+var ctx = canvas.getContext("2d");
 (function() {
-        var canvas = document.getElementById('platCanvas'),
-                context = canvas.getContext('2d');
 
         window.addEventListener('resize', resizeCanvas, false);
         
@@ -18,8 +18,6 @@
         }
 })();
 
-var canvas = document.getElementById("platCanvas");
-var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
 var y = canvas.height-30;
