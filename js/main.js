@@ -30,3 +30,22 @@ function draw() {
 }
 
 setInterval(draw, 10);
+
+(function() {
+        var canvas = document.getElementById('myCanvas'),
+                context = canvas.getContext('2d');
+
+        window.addEventListener('resize', resizeCanvas, false);
+        
+        function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                
+                drawStuff(); 
+        }
+        resizeCanvas();
+        
+        function drawStuff() {
+                draw();
+        }
+})();
