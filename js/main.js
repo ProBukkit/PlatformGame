@@ -1,4 +1,4 @@
-import {Paddle} from 'objects/paddle.js';
+import {Paddle} from 'objects/paddle';
 var canvas = document.getElementById("platCanvas");
 var ctx = canvas.getContext("2d");
 (function() {
