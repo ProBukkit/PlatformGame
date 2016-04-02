@@ -18,7 +18,7 @@ var y = canvas.height-30;
 var dx = 2;
 var dy = -2;
 var paddleHeight = canvas.height/50;
-var paddleWidth = canvas.width/80;
+var paddleWidth = canvas.width/25;
 var paddleX = (canvas.width-paddleWidth)/2;
 
 function drawBall() {
