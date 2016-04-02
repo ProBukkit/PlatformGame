@@ -43,8 +43,11 @@ function draw() {
     drawBall();
     drawPaddle();
     
-    if((paddleX+paddleWidth+1) < canvas.width){
+    if(!turnedAround && (paddleX+paddleWidth+(canvas.width/48)) < canvas.width){
         paddleX++;
+    } else {
+        turnedAround = true;
+        paddleX--;
     }
     console.log((paddleX+paddleWidth+1)+ " / " + canvas.width);
     
