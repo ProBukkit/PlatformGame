@@ -28,7 +28,7 @@ function drawBall() {
 
 function drawSun(){
     ctx.beginPath();
-    ctx.draw(canvas.height, canvas.width, Math.PI*2);
+    ctx.arc(canvas.height, canvas.width, Math.PI*2);
     ctx.fillStyle = "#D9FA1B";
     ctx.fill();
     ctx.closePath();
