@@ -47,7 +47,11 @@ function draw() {
         paddleX++;
     } else {
         turnedAround = true;
+        if(paddleX-1-(canvas.width/48) > -canvas.width){
         paddleX--;
+        } else {
+            turnedAround = false;
+        }
     }
     console.log((paddleX+paddleWidth+1)+ " / " + canvas.width);
     
