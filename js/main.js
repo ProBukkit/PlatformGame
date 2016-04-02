@@ -43,10 +43,7 @@ function draw() {
     drawBall();
     drawPaddle();
     
-    if(!turnedAround) paddleX++;
-    if(paddleX > canvas.width){
-        paddleX--;
-    }
+    paddleX++;
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
