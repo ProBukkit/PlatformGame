@@ -1,3 +1,4 @@
+require('./objects/paddle.js');
 var canvas = document.getElementById("platCanvas");
 var ctx = canvas.getContext("2d");
 (function() {
@@ -24,9 +25,7 @@ var paddleWidth = canvas.width/5;
 var paddleX = (canvas.width-paddleWidth)/2;
 var paddle
 
-require(['./objects/paddle'], function(Paddle) {
-	 paddle = new Paddle(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-});
+paddle = new Paddle(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
 
 function drawBall() {
     ctx.beginPath();
