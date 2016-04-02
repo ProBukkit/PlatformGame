@@ -8,6 +8,9 @@ var ctx = canvas.getContext("2d");
         function resizeCanvas() {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
+                paddleWidth = canvas.height/50;
+                paddleHeight = canvas.width/50;
+                var paddleX = (canvas.width-paddleWidth)/2;
         }
         resizeCanvas();
 })();
@@ -53,7 +56,6 @@ function draw() {
             turnedAround = false;
         }
     }
-    console.log((paddleX+paddleWidth+1)+ " / " + canvas.width);
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
