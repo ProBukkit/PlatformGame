@@ -29,6 +29,7 @@ function drawBall() {
     ctx.closePath();
 }
 
+var turnedAround = false;
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -41,11 +42,16 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawPaddle();
-
-    if(canvas.width-paddleX > 0){
+    
+    if((paddleX-1) < 0){
         paddleX++;
+        turnedAround = true;
+    } else if(turnedAround = true){
+        if((paddle+1) > canvas.width){
+            turnedAround = false;
+        }
     } else {
-        paddleX--;
+        paddleX++;
     }
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
