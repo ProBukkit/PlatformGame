@@ -22,9 +22,10 @@ var dy = -2;
 var paddleHeight = canvas.height/50;
 var paddleWidth = canvas.width/5;
 var paddleX = (canvas.width-paddleWidth)/2;
+var paddle
 
 require(['./objects/paddle'], function(Paddle) {
-	var paddle = new Paddle(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+	 paddle = new Paddle(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
 });
 
 function drawBall() {
