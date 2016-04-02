@@ -17,8 +17,8 @@ var x = canvas.width/2;
 var y = canvas.height-30;
 var dx = 2;
 var dy = -2;
-var paddleHeight = 10;
-var paddleWidth = 75;
+var paddleHeight = canvas.height/50;
+var paddleWidth = canvas.width/80;
 var paddleX = (canvas.width-paddleWidth)/2;
 
 function drawBall() {
@@ -43,12 +43,12 @@ function draw() {
     drawBall();
     drawPaddle();
     
-    if(!turnedAround && (paddleX+paddleWidth+(canvas.width/100)) < canvas.width){
-        paddleX = paddleX+(canvas.width/100);
+    if(!turnedAround && (paddleX+paddleWidth+(canvas.width/500)) < canvas.width){
+        paddleX = paddleX+(canvas.width/500);
     } else {
         turnedAround = true;
-        if(paddleX-(canvas.width/100) > 0){
-        paddleX = paddleX-(canvas.width/100);
+        if(paddleX-(canvas.width/500) > 0){
+        paddleX = paddleX-(canvas.width/500);
         } else {
             turnedAround = false;
         }
