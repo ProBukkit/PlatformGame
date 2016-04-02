@@ -47,11 +47,9 @@ function draw() {
         paddleX = paddleX+(canvas.width/24);
     } else {
         turnedAround = true;
-        paddleX = paddleX+(canvas.width/24);
         if(paddleX-(canvas.width/24) > 0){
         paddleX = paddleX-(canvas.width/24);
         } else {
-            paddleX = paddleX-(canvas.width/24);
             turnedAround = false;
         }
     }
