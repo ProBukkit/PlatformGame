@@ -42,7 +42,7 @@ function draw() {
     drawBall();
     drawPaddle();
 
-    if(canvas.width-padleX){
+    if(canvas.width-paddleX){
         padleX++;
     }
     
