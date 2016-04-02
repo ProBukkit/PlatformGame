@@ -46,7 +46,7 @@ function draw() {
     if((paddleX+paddleWidth+1) < canvas.width){
         paddleX++;
     }
-    console.log(paddleX);
+    console.log((paddleX+paddleWidth+1)+ " / " + canvas.width);
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
