@@ -1,5 +1,9 @@
 var canvas = document.getElementById("myCanvas");
-canvas.width = window.innerWidth;
+canvas.width = window.innerWidth && document.documentElement.clientWidth ? 
+Math.min(window.innerWidth, document.documentElement.clientWidth) : 
+window.innerWidth || 
+document.documentElement.clientWidth || 
+document.getElementsByTagName('body')[0].clientWidth;
 canvas.height = window.innerHeight;
 var ctx = canvas.getContext("2d");
 var ballRadius = 10;
