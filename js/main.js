@@ -44,12 +44,14 @@ function draw() {
     drawPaddle();
     
     if(!turnedAround && (paddleX+paddleWidth+(canvas.width/24)) < canvas.width){
-        paddleX++;
+        paddleX = paddleX+(canvas.width/24);
     } else {
         turnedAround = true;
+        paddleX = paddleX+(canvas.width/24);
         if(paddleX-(canvas.width/24) > 0){
-        paddleX--;
+        paddleX = paddleX-(canvas.width/24);
         } else {
+            paddleX = paddleX-(canvas.width/24);
             turnedAround = false;
         }
     }
