@@ -23,7 +23,7 @@ var paddleHeight = canvas.height/50;
 var paddleWidth = canvas.width/5;
 var paddleX = (canvas.width-paddleWidth)/2;
 
-require(['objects/paddle'], function(Paddle) {
+require(['./objects/paddle'], function(Paddle) {
 	var paddle = new Paddle(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
 });
 
