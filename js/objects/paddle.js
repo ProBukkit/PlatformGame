@@ -1,4 +1,4 @@
-export class Paddle {
+class Paddle {
     constructor(height, width) {
         this.ctx = ctx, this.x = x, this.y = y, this.w = w, this.h = h;
             this.turnedAround = false;
