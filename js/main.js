@@ -26,18 +26,10 @@ function drawBall() {
     ctx.closePath();
 }
 
-function drawSun(){
-    ctx.beginPath();
-    ctx.arc(50,30, 15, 0, Math.PI*2);
-    ctx.fillStyle = "#D9FA1B";
-    ctx.fill();
-    ctx.closePath();
-}
-
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
-    drawSun();
+
     
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
